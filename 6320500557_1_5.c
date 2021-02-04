@@ -1,16 +1,17 @@
 #include <stdio.h>
 int main()
 {
-    int N,location=0,i,max;
+    int N;
     scanf("%d",&N);
-    int Number[N];
-    for(i=0;i<N;i++)
-    {
+    int Number[N],location=0,i,max=0;
+    for(i=1; i<=N; i++)
         scanf("%d",&Number[i]);
-        if( max<Number[i] )
+    for(i=1; i<=N; i++)
+    {
+        if( max < Number[i] )
         {
             max = Number[i];
-            location = i+1;
+            location=i;
         }
     }
     printf("%d %d",location,max);
