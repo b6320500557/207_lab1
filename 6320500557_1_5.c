@@ -1,18 +1,18 @@
 #include <stdio.h>
 int main()
 {
-    int N;
+    int N,location=0,i,max;
     scanf("%d",&N);
-    int i,j,a[N],x=0;
-    for(i=1;i<=N;i++)
+    int Number[N];
+    for(i=0;i<N;i++)
     {
-        scanf("%d",&a[i]);
-        if(j<a[i])
+        scanf("%d",&Number[i]);
+        if( max<Number[i] )
         {
-            j = a[i];
-            x++;
+            max = Number[i];
+            location = i+1;
         }
     }
-    printf("%d %d",x,j);
+    printf("%d %d",location,max);
     return 0;
 }
